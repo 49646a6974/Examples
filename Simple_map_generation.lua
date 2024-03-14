@@ -23,10 +23,10 @@ init()
 function gen_map()
 	local d=math.floor(math.random(4)) - 1	--0,3 udlr
 	while coverage.goal > coverage.current do
-		if d==0 and spot.x>size.min_x then spot.x=spot.x-1 end
-		if d==1 and spot.x<size.max_x then spot.x=spot.x+1 end
-		if d==2 and spot.y>size.min_y then spot.y=spot.y-1 end
-		if d==3 and spot.y<size.max_y then spot.y=spot.y+1 end
+		if d==2 and spot.x>size.min_x then spot.x=spot.x-1 end
+		if d==3 and spot.x<size.max_x then spot.x=spot.x+1 end
+		if d==0 and spot.y>size.min_y then spot.y=spot.y-1 end
+		if d==1 and spot.y<size.max_y then spot.y=spot.y+1 end
 		if pix(spot.x,spot.y)==0	--checks if the pixel is blank
 			then		--if not,  then count it.
 			coverage.current=coverage.current+1 
